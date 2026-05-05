@@ -1,4 +1,4 @@
-const BASE_URL = import.meta.env.VITE_API_URL || "https://mbackend-eq1g.onrender.com";
+const BASE_URL = import.meta.env.VITE_API_URL || "https://mbackend-eqjg.onrender.com";
 
 // 🔥 helper to handle responses
 const handleResponse = async (res: Response) => {
