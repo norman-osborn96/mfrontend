@@ -1,6 +1,6 @@
 import { createClient, type Session, SupabaseClient, type User } from "@supabase/supabase-js";
 
-const BASE_URL = "http://localhost:8000";
+const BASE_URL = import.meta.env.VITE_API_URL || "https://mbackend-eq1g.onrender.com";
 const FETCH_TIMEOUT_MS = 12_000;
 const SUPABASE_GET_USER_MS = 8_000;
 
