@@ -478,7 +478,19 @@ function EmailListInner({
 
             <div className="br-field">
               <div className="br-field-l">Priority</div>
-              <PriorityBadge level={selectedEmail.level} size="md" />
+              <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+                <PriorityBadge level={selectedEmail.level} size="md" />
+                {selectedEmail.ai_action === "REQUIRES_REPLY" && (
+                  <span className="br-pill br-pill--danger" style={{ fontSize: 11, padding: "2px 8px" }}>
+                    Action Required
+                  </span>
+                )}
+                {selectedEmail.ai_action === "FYI" && (
+                  <span className="br-pill br-pill--lp" style={{ fontSize: 11, padding: "2px 8px" }}>
+                    FYI Only
+                  </span>
+                )}
+              </div>
             </div>
 
             <div className="br-field">
